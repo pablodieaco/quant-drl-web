@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+sqlalchemy
+psycopg2-binary
+loguru
+plotly
+dotenv
+bcrypt
+matplotlib
+matplotx
+anywidget

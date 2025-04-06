@@ -1,0 +1,19 @@
+ALGORITHM: PPO
+FEATURE: LSTM
+REWARD_TYPE: log_reward
+FEATURE_INDEX: 3
+INITIAL_CAPITAL: 10000
+END_DATE: 2022-06-30 00:00:00
+LENGTH_TRAIN_DATA: 10
+LENGTH_EVAL_DATA: 4
+COMPANIES: [{'abv': 'LLY', 'name': 'Lilly'}, {'abv': 'AAPL', 'name': 'Apple'}, {'abv': 'AMZN', 'name': 'Amazon'}, {'abv': 'JPM', 'name': 'JPMorgan Chase'}, {'abv': 'WMT', 'name': 'Walmart'}, {'abv': 'CVX', 'name': 'Chevron'}, {'abv': 'LLY', 'name': 'Lilly'}, {'abv': 'AAPL', 'name': 'Apple'}, {'abv': 'AMZN', 'name': 'Amazon'}, {'abv': 'JPM', 'name': 'JPMorgan Chase'}, {'abv': 'WMT', 'name': 'Walmart'}, {'abv': 'CVX', 'name': 'Chevron'}]
+FEATURES: ['Open', 'High', 'Low', 'Close']
+INDICATORS: ['SMA', 'EMA', 'RSI', 'MACD', 'Bollinger_High', 'Bollinger_Low', 'ATR']
+NORMALIZE: standard
+TRADING_COST: 0.0025
+WINDOW_LENGTH: 50
+STEPS: 100
+SCALE_REWARDS: True
+TOTAL_TIMESTEPS: 2000000.0
+CHECKPOINT_FREQ: 50000.0
+LEARNING_RATE: 0.0003

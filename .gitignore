@@ -1,0 +1,41 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# === Entornos virtuales ===
+.env/
+.venv/
+env/
+venv/
+
+# Build artifacts
+*.egg-info/
+
+# === Imágenes y gráficos ===
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+
+# === Archivos temporales de notebooks ===
+.ipynb_checkpoints/
+
+# === Archivos de datos que NO quieres versionar ===
+*.csv
+*.bin
+*.zip
+*.json
+*.npy
+*.h5
+*.pkl
+
+#  Pero incluye los .zip y .csv en examples/
+!examples/*.zip
+!examples/*.csv
+
+# Variables de entorno
+*.env
