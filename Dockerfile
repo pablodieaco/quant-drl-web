@@ -19,11 +19,6 @@ COPY . . /app/
 # Añadir /app al PYTHONPATH para que los imports funcionen correctamente
 ENV PYTHONPATH="/app"
 
-# Mover y registrar quant-drl-core como editable
-RUN mv /app/_core_temp /app/quant-drl-core
-
-RUN pip install /app/quant-drl-core
-
 # Puerto para Streamlit
 EXPOSE 8501
 

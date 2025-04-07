@@ -8,24 +8,13 @@ GITHUB_USER=pablodieaco
 GITHUB_REGISTRY=ghcr.io
 FULL_IMAGE=$(GITHUB_REGISTRY)/$(GITHUB_USER)/$(IMAGE_NAME):$(IMAGE_TAG)
 
-# Carpeta temporal del core
-CORE_TEMP=_core_temp
-
-# Ruta al core original
-CORE_ORIGIN=../quant-drl-core
 
 .PHONY: build save load push pull clean
 
 # Copia el core, construye el contenedor, borra la copia temporal
 build:
-	@echo "Copiando quant-drl-core a $(CORE_TEMP)..."
-	rsync -av --exclude '.git/' --exclude 'notebooks/' --exclude 'logs/' --exclude 'models/' --exclude '.venv/' --exclude '__pycache__/' $(CORE_ORIGIN)/ $(CORE_TEMP)/
-
 	@echo "Construyendo imagen Docker..."
 	docker compose build
-
-	@echo "Limpiando copia temporal..."
-	rm -rf $(CORE_TEMP)
 
 	@echo "Build completado."
 
