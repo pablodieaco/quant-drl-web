@@ -20,17 +20,34 @@ It serves as the frontend for the [`quant-drl-core`](https://github.com/pablodie
 
 ---
 
-## 🖼️ Preview
-TODO
-<!-- 🖼️ You can replace this with a GIF or a screenshot
+## 🖼️ App Preview
 
-<!-- ![App Preview](assets/dashboard_preview.gif) -->
+### 📊 Financial Information  
+An overview of each company's economic and financial data.
 
-<!-- > _Insert a short demo GIF or screenshot of the Streamlit app here_
-> - You can use `peek` or `screen-to-gif` to record your screen
-> - Save it to `/assets/` and link it above --> -->
+<img src="gifs/informacion_financiera.gif" alt="Financial Info" width="1000"/>
 
 ---
+
+### 📝 Evaluations
+
+#### 🧪 Batch Evaluation  
+Evaluate multiple simulation at once, and analyse the performance of your model.
+
+<img src="gifs/evaluacion_lote.gif" alt="Batch Evaluation" width="1000"/>
+
+#### 🔍 Individual Evaluation  
+Dive deep into the analysis of a single simulation.
+
+<img src="gifs/evaluacion_individual.gif" alt="Individual Evaluation" width="1000"/>
+
+---
+
+### 📈 Metrics Analysis  
+Explore key performance indicators of your trained models.
+
+<img src="gifs/analisis_metricas.gif" alt="Metrics Analysis" width="1000"/>
+
 
 ## 📁 Project Structure
 

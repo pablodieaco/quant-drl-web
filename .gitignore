@@ -18,7 +18,6 @@ venv/
 *.jpg
 *.jpeg
 *.png
-*.gif
 *.svg
 
 # === Archivos temporales de notebooks ===
@@ -40,5 +39,10 @@ venv/
 # Variables de entorno
 *.env
 
+# Logs
+logs/
+*.log
+
 # Deprecated folder
 _Deprecated/
+
