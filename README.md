@@ -68,18 +68,28 @@ git clone https://github.com/pablodieaco/quant-drl-web.git
 cd quant-drl-web
 ```
 
-### 2. Build with local quant-drl-core
+### 2. Run using the latest Docker image (recommended)
+This will pull the latest published image from GitHub Container Registry and run the app.
 
 ```bash
-./build.sh
+make run
 ```
-This script will:
 
-- Copy your local quant-drl-core/ into a temporary folder
+Once running, the app will be available at http://localhost:8501
 
-- Exclude unnecessary files (e.g., .venv/, logs/, notebooks/)
+### 3. Local development mode (with local quant-drl-core)
+If you're modifying `quant-drl-web` and want to test changes locally:
 
-- Build the Docker image and install the core as an editable package
+```bash
+make build 
+make run-local
+```
+This will
+
+- Build the Docker image with your local changes
+- Launch the app using the new built image
+
+Once running, the app will also be available at http://localhost:8501
 
 ### 3. Launch the app
 

@@ -6,6 +6,11 @@ on:
       - main
       - 'release/**'
       - 'feature/**'
+      
+    paths:
+      - 'web/**'
+      - 'Dockerfile'
+      - 'requirements.txt'
 
 jobs:
   build:

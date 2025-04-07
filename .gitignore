@@ -39,3 +39,6 @@ venv/
 
 # Variables de entorno
 *.env
+
+# Deprecated folder
+_Deprecated/

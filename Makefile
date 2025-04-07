@@ -21,10 +21,16 @@ build:
 # Ejecuta el contenedor
 run:
 	@echo "Ejecutando contenedor..."
-	docker compose up -d
+	docker compose --profile remote up -d
 
 	@echo "Contenedor ejecutándose."
 
+# Ejecuta el contenedor usando la imagen local
+run-local:
+	@echo "Ejecutando contenedor..."
+	docker compose --profile local up
+
+	@echo "Contenedor ejecutándose."
 # Guarda la imagen en un archivo .tar
 save:
 	@echo "Guardando imagen como $(TAR_FILE)..."
