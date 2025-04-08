@@ -107,20 +107,6 @@ This will
 - Launch the app using the new built image
 
 Once running, the app will also be available at http://localhost:8501
-
-### 3. Launch the app
-
-```bash
-docker-compose up
-```
-Once running, the app will be available at http://localhost:8501
-
-### 4. Alternative: Build and Launch
-
-```bash
-./build.sh yes
-```
-
 ---
 
 ## 🧪 Example Models
@@ -163,3 +149,4 @@ Made with ❤️ by **Pablo Diego Acosta**
 - [ ] Embed live charts from financial APIs
 - [ ] Auto-refresh evaluation dashboard with scheduled updates
 - [ ] Live inference from trained DRL models
+- [ ] Add functionalities for managing saved portfolios
