@@ -1,4 +1,4 @@
-quant-drl-core==0.1.0
+quant-drl-core
 streamlit==1.44.1
 pandas>=2.2.3
 numpy>=2.0.0

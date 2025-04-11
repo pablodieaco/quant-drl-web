@@ -1,12 +1,13 @@
 name: Build and Push Docker image
 
+
 on:
   push:
     branches:
       - main
+      - develop
       - 'release/**'
       - 'feature/**'
-      
     paths:
       - 'web/**'
       - 'Dockerfile'
@@ -35,5 +36,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/pablodieaco/quant-drl-web:latest
+          tags: ghcr.io/pablodieaco/quant-drl-web${{ github.ref_name == 'develop' && '-develop' || '' }}:latest
   

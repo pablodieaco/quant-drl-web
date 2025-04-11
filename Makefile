@@ -14,7 +14,7 @@ FULL_IMAGE=$(GITHUB_REGISTRY)/$(GITHUB_USER)/$(IMAGE_NAME):$(IMAGE_TAG)
 # Copia el core, construye el contenedor, borra la copia temporal
 build:
 	@echo "Construyendo imagen Docker..."
-	docker compose build
+	docker compose --profile local build
 
 	@echo "Build completado."
 
