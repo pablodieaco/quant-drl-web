@@ -85,7 +85,22 @@ git clone https://github.com/pablodieaco/quant-drl-web.git
 cd quant-drl-web
 ```
 
-### 2. Run using the latest Docker image (recommended)
+### 2. Create a `.env` file using the sample file `.env.sample`
+```bash
+cp .env.sample .env
+```
+
+Then edit the `.env` file:
+```env
+POSTGRES_USER=<USER_NAME>
+POSTGRES_PASSWORD=<PASSWORD>
+POSTGRES_DB=<DB_NAME>
+
+RESULTS_CSV=examples/results/evaluation_results.csv
+MODEL_HIERARCHY=examples/models/metadata/hierarchy.json
+```
+
+### 3. Run using the latest Docker image (recommended)
 This will pull the latest published image from GitHub Container Registry and run the app.
 
 ```bash
@@ -94,7 +109,7 @@ make run
 
 Once running, the app will be available at http://localhost:8501
 
-### 3. Local development mode (with local quant-drl-core)
+### 4. Local development mode (with local quant-drl-core)
 If you're modifying `quant-drl-web` and want to test changes locally:
 
 ```bash
