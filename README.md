@@ -94,7 +94,12 @@ make run
 
 Once running, the app will be available at http://localhost:8501
 
-### 3. Local development mode (with local quant-drl-core)
+### 3. Run using the develop image (development mode)
+```bash
+make run PROFILE=develop
+```
+
+### 4. Local development mode (with local quant-drl-core)
 If you're modifying `quant-drl-web` and want to test changes locally:
 
 ```bash
@@ -108,14 +113,14 @@ This will
 
 Once running, the app will also be available at http://localhost:8501
 
-### 3. Launch the app
+### 5. Launch the app
 
 ```bash
 docker-compose up
 ```
 Once running, the app will be available at http://localhost:8501
 
-### 4. Alternative: Build and Launch
+### 6. Alternative: Build and Launch
 
 ```bash
 ./build.sh yes

@@ -7,6 +7,7 @@ TAR_FILE=$(IMAGE_NAME).tar
 GITHUB_USER=pablodieaco
 GITHUB_REGISTRY=ghcr.io
 FULL_IMAGE=$(GITHUB_REGISTRY)/$(GITHUB_USER)/$(IMAGE_NAME):$(IMAGE_TAG)
+PROFILE ?= remote
 
 
 .PHONY: build save load push pull clean
@@ -21,16 +22,16 @@ build:
 # Ejecuta el contenedor
 run:
 	@echo "Ejecutando contenedor..."
-	docker compose --profile remote up -d
+	docker compose --profile $(PROFILE) up -d
 
 	@echo "Contenedor ejecutándose."
 
-# Ejecuta el contenedor usando la imagen local
-run-local:
-	@echo "Ejecutando contenedor..."
-	docker compose --profile local up
+# # Ejecuta el contenedor usando la imagen local
+# run-local:
+# 	@echo "Ejecutando contenedor..."
+# 	docker compose --profile local up
 
-	@echo "Contenedor ejecutándose."
+# 	@echo "Contenedor ejecutándose."
 # Guarda la imagen en un archivo .tar
 save:
 	@echo "Guardando imagen como $(TAR_FILE)..."

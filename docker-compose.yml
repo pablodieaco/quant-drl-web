@@ -46,6 +46,32 @@ services:
         python web/db/upload_evaluation_data.py &&
         streamlit run web/app.py --server.port=8501 --server.enableCORS=false
       "
+  
+  web-develop:
+    image: "ghcr.io/pablodieaco/quant-drl-web-develop:latest" 
+    container_name: quant-drl-web-develop
+    profiles: ["develop"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8502:8501"
+    env_file:
+      - .env
+    environment:
+      PYTHONPATH: /app
+    volumes:
+      - .:/app 
+      - ./examples:/app/examples
+    working_dir: /app
+    command: >
+      bash -c "
+        python web/db/create_tables.py &&
+        python web/db/upload_companies.py &&
+        python web/db/upload_models_data.py &&
+        python web/db/upload_evaluation_data.py &&
+        streamlit run web/app.py --server.port=8501 --server.enableCORS=false
+      "
   web-local:
     build:
         context: .
